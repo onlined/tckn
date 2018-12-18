@@ -6,9 +6,9 @@ It exposes two functions: `generate` and `validate`.
 
 Usage
 -----
-    >>> import tckn
-    >>> tckn.generate()
-    '21862110720'
-    >>> tckn.validate('43650391326')
-    True
+>>> import tckn
+>>> tckn.generate()
+'21862110720'
+>>> tckn.validate('43650391326')
+True
 
