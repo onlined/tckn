@@ -3,6 +3,11 @@ name = "tckn"
 version = "1.0.0"
 description = "A library for generating and validating Republic of Turkey identity numbers"
 authors = ["Ekin Dursun <ekindursun@gmail.com>"]
+readme = "README.rst"
+license = "MIT"
+repository = "https://github.com/sdispater/poetry"
+homepage = "https://github.com/sdispater/poetry"
+
 
 [tool.poetry.dependencies]
 python = "^3.7"
