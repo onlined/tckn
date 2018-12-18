@@ -4,7 +4,8 @@ import string
 
 def generate() -> str:
     digits = range(10)
-    first_9_digits = random.choices(digits, k=9)
+    first_digit = random.randint(1, 9)  # Must be nonzero
+    first_9_digits = [first_digit] + random.choices(digits, k=8)
     digit_10 = (sum(first_9_digits[::2])*7 - sum(first_9_digits[1::2])) % 10
     first_10_digits = first_9_digits + [digit_10]
     digit_11 = sum(first_10_digits) % 10
@@ -14,6 +15,8 @@ def generate() -> str:
 
 def validate(number: str) -> bool:
     if len(number) != 11:
+        return False
+    if number[0] == '0':
         return False
     if not all(d in string.digits for d in number):
         return False
