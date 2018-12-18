@@ -3,6 +3,7 @@ import string
 
 
 def generate() -> str:
+    """Generate a random valid identity number."""
     digits = range(10)
     first_digit = random.randint(1, 9)  # Must be nonzero
     first_9_digits = [first_digit] + random.choices(digits, k=8)
@@ -14,6 +15,7 @@ def generate() -> str:
 
 
 def validate(number: str) -> bool:
+    """Check if a string is a valid identity number or not."""
     if len(number) != 11:
         return False
     if number[0] == '0':
